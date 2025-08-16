@@ -1,0 +1,9 @@
+[[redirects]]
+  from = "/auth"
+  to = "https://api.netlify.com/authorize"
+  status = 200
+
+[[redirects]]
+  from = "/admin/*"
+  to = "/admin/index.html"
+  status = 200
