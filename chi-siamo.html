@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Chi siamo — Compagnia di Arcieri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Missione, storia, staff e strutture della Compagnia di Arcieri.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Compagnia di Arcieri</a>
+      <nav aria-label="Navigazione principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="chi-siamo.html">Chi siamo</a></li>
+          <li><a href="attivita.html">Attività</a></li>
+          <li><a href="galleria.html">Galleria</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto" class="container">
+    <h1>Chi siamo</h1>
+
+    <section>
+      <h2>Missione e valori</h2>
+      <p>Promuoviamo il tiro con l’arco in un ambiente sicuro, inclusivo e formativo. Valorizziamo rispetto, lealtà, crescita personale e spirito di comunità.</p>
+      <ul class="bullets">
+        <li>Sicurezza e responsabilità</li>
+        <li>Inclusione e accoglienza</li>
+        <li>Formazione continua</li>
+        <li>Collaborazione e fair play</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Storia in breve</h2>
+      <ol class="timeline">
+        <li><strong>[Anno]</strong> — Fondazione della compagnia.</li>
+        <li><strong>[Anno]</strong> — Apertura del primo campo di allenamento.</li>
+        <li><strong>[Anno]</strong> — Prime attività di formazione strutturate.</li>
+        <li><strong>[Anno]</strong> — Sviluppo di nuove strutture e crescita soci.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Istruttori e Staff</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="https://picsum.photos/seed/staff1/600/400" alt="Ritratto istruttore 1">
+          <h3>Nome Cognome</h3>
+          <p>Ruolo: Istruttore</p>
+          <p>Bio: breve descrizione (1–2 frasi).</p>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/staff2/600/400" alt="Ritratto istruttore 2">
+          <h3>Nome Cognome</h3>
+          <p>Ruolo: Istruttore</p>
+          <p>Bio: breve descrizione (1–2 frasi).</p>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/staff3/600/400" alt="Ritratto istruttore 3">
+          <h3>Nome Cognome</h3>
+          <p>Ruolo: Referente</p>
+          <p>Bio: breve descrizione (1–2 frasi).</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Strutture e campi</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="https://picsum.photos/seed/field1/600/400" alt="Campo di tiro all’aperto">
+          <h3>Campo A — Outdoor</h3>
+          <p>Indirizzo: [Via, Comune]</p>
+          <p>Orari indicativi: [Giorni e fasce]</p>
+          <p><a href="#" rel="noopener">Mappa</a></p>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/seed/field2/600/400" alt="Struttura per allenamenti">
+          <h3>Campo B — Area coperta</h3>
+          <p>Indirizzo: [Via, Comune]</p>
+          <p>Orari indicativi: [Giorni e fasce]</p>
+          <p><a href="#" rel="noopener">Mappa</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Collaborazioni e partner</h2>
+      <p>Collaboriamo con enti locali e associazioni del territorio per diffondere la cultura del tiro con l’arco.</p>
+      <div class="logo-row">
+        <img src="https://via.placeholder.com/140x60?text=Logo+1" alt="Logo partner 1">
+        <img src="https://via.placeholder.com/140x60?text=Logo+2" alt="Logo partner 2">
+        <img src="https://via.placeholder.com/140x60?text=Logo+3" alt="Logo partner 3">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Compagnia di Arcieri</p>
+    </div>
+  </footer>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('menu');
+    if (toggle && menu) toggle.addEventListener('click', ()=> {
+      const expanded = toggle.getAttribute('aria-expanded')==='true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    });
+    const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Compagnia di Arcieri - Homepage</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compagnia di Arcieri: corsi introduttivi e allenamenti per tutti i livelli. Scopri chi siamo, dove siamo e guarda la galleria.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Homepage Compagnia di Arcieri">Compagnia di Arcieri</a>
+      <nav aria-label="Navigazione principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu" class="nav-list">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+          <li><a href="attivita.html">Attività</a></li>
+          <li><a href="galleria.html">Galleria</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto">
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Tiro con l’arco per tutti</h1>
+        <p>Corsi introduttivi e allenamenti guidati da istruttori qualificati a [Città/Area].</p>
+        <div class="cta-group">
+          <a class="btn btn-primary" href="mailto:info@tua-associazione.it">Prenota prova</a>
+          <a class="btn btn-outline" href="attivita.html">Scopri le attività</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="teasers container">
+      <div class="teaser">
+        <img src="https://picsum.photos/seed/archery1/800/500" alt="Arcieri in allenamento">
+        <h2>Chi siamo</h2>
+        <p>Una comunità inclusiva che promuove il tiro con l’arco in sicurezza e con passione.</p>
+        <a class="link" href="chi-siamo.html">Conosci la compagnia →</a>
+      </div>
+      <div class="teaser">
+        <img src="https://picsum.photos/seed/archery2/800/500" alt="Bersagli e campi di tiro">
+        <h2>Attività</h2>
+        <p>Corsi base per iniziare e sessioni di allenamento per ogni livello.</p>
+        <a class="link" href="attivita.html">Vedi attività →</a>
+      </div>
+      <div class="teaser">
+        <img src="https://picsum.photos/seed/archery3/800/500" alt="Momenti dalla galleria fotografica">
+        <h2>Galleria</h2>
+        <p>Uno sguardo ai nostri campi, allenamenti e alla vita associativa.</p>
+        <a class="link" href="galleria.html">Sfoglia le foto →</a>
+      </div>
+    </section>
+
+    <section class="photo-strip">
+      <div class="container photo-strip-inner">
+        <img src="https://picsum.photos/seed/archery4/600/400" alt="Scena di tiro con l’arco">
+        <img src="https://picsum.photos/seed/archery5/600/400" alt="Archi e frecce su rastrelliera">
+        <img src="https://picsum.photos/seed/archery6/600/400" alt="Campo all’aperto con bersagli">
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>Contatti</h3>
+        <p>Email: <a href="mailto:info@tua-associazione.it">info@tua-associazione.it</a><br>
+        Tel: <a href="tel:+39XXXXXXXXXX">+39 XXXXX XXXXX</a><br>
+        Sede: [Indirizzo campo principale]</p>
+      </div>
+      <div>
+        <h3>Social</h3>
+        <p>
+          <a href="#" rel="noopener">Facebook</a> ·
+          <a href="#" rel="noopener">Instagram</a>
+        </p>
+      </div>
+      <div>
+        <h3>Privacy</h3>
+        <p>Foto pubblicate con autorizzazione. Richieste di rimozione: <a href="mailto:privacy@tua-associazione.it">privacy@tua-associazione.it</a></p>
+      </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> Compagnia di Arcieri</div>
+  </footer>
+
+  <script>
+    // Mobile menu
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('menu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        menu.classList.toggle('open');
+      });
+    }
+    // Year
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

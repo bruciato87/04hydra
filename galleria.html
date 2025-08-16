@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <title>Galleria — Compagnia di Arcieri</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Galleria fotografica: Allenamenti, Strutture, Storia, Vita associativa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenuto">Salta al contenuto</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Compagnia di Arcieri</a>
+      <nav aria-label="Navigazione principale">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">Menu</button>
+        <ul id="menu" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chi-siamo.html">Chi siamo</a></li>
+          <li><a href="attivita.html">Attività</a></li>
+          <li><a class="active" href="galleria.html">Galleria</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenuto" class="container">
+    <h1>Galleria fotografica</h1>
+
+    <section>
+      <h2>Allenamenti</h2>
+      <div class="gallery">
+        <img src="https://picsum.photos/seed/train1/800/600" alt="Allenamento 1">
+        <img src="https://picsum.photos/seed/train2/800/600" alt="Allenamento 2">
+        <img src="https://picsum.photos/seed/train3/800/600" alt="Allenamento 3">
+      </div>
+    </section>
+
+    <section>
+      <h2>Strutture</h2>
+      <div class="gallery">
+        <img src="https://picsum.photos/seed/struct1/800/600" alt="Struttura 1">
+        <img src="https://picsum.photos/seed/struct2/800/600" alt="Struttura 2">
+        <img src="https://picsum.photos/seed/struct3/800/600" alt="Struttura 3">
+      </div>
+    </section>
+
+    <section>
+      <h2>Storia</h2>
+      <div class="gallery">
+        <img src="https://picsum.photos/seed/history1/800/600" alt="Foto storica 1">
+        <img src="https://picsum.photos/seed/history2/800/600" alt="Foto storica 2">
+      </div>
+    </section>
+
+    <section>
+      <h2>Vita associativa</h2>
+      <div class="gallery">
+        <img src="https://picsum.photos/seed/life1/800/600" alt="Vita associativa 1">
+        <img src="https://picsum.photos/seed/life2/800/600" alt="Vita associativa 2">
+        <img src="https://picsum.photos/seed/life3/800/600" alt="Vita associativa 3">
+      </div>
+      <p class="hint">Suggerimento: puoi incorporare album da Google Foto/Drive impostando la condivisione “Chi ha il link può visualizzare”.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Compagnia di Arcieri</p>
+    </div>
+  </footer>
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('menu');
+    if (toggle && menu) toggle.addEventListener('click', ()=> {
+      const expanded = toggle.getAttribute('aria-expanded')==='true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    });
+    const y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
