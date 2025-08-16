@@ -97,3 +97,8 @@ thead th{background:var(--light)}
 .site-footer a{color:var(--green);text-decoration:none}
 .site-footer a:hover{text-decoration:underline}
 copyright, .copyright{padding:.8rem 0;border-top:1px solid #e5e7eb;color:#5f6b74;font-size:.95rem}
+
+.md-section img{max-width:100%;height:auto;border-radius:.3rem}
+.md-section a{color:var(--green);text-decoration:none}
+.md-section a:hover{text-decoration:underline}
+.md-section h2{margin-top:1rem}

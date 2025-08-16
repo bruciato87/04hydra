@@ -1,0 +1,33 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "media"
+public_folder: "/media"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "pagine"
+    label: "Pagine"
+    files:
+      - file: "content/home.md"
+        name: "home"
+        label: "Homepage"
+        fields:
+          - { label: "Contenuto", name: "body", widget: "markdown" }
+      - file: "content/chi-siamo.md"
+        name: "chi_siamo"
+        label: "Chi siamo"
+        fields:
+          - { label: "Contenuto", name: "body", widget: "markdown" }
+      - file: "content/attivita.md"
+        name: "attivita"
+        label: "Attività"
+        fields:
+          - { label: "Contenuto", name: "body", widget: "markdown" }
+      - file: "content/galleria.md"
+        name: "galleria"
+        label: "Galleria"
+        fields:
+          - { label: "Contenuto", name: "body", widget: "markdown" }
