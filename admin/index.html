@@ -12,5 +12,33 @@
     // Stili del sito nelle anteprime
     CMS.registerPreviewStyle('/styles.css');
   </script>
+  <section class="container md-section"><div id="md-home"></div></section>
 </body>
 </html>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  async function loadMd(selector, path){
+    const el = document.querySelector(selector);
+    if(!el) return;
+    const res = await fetch(path);
+    const md = await res.text();
+    el.innerHTML = marked.parse(md);
+  }
+  // Caricamenti per pagina:
+  // Homepage
+  if (location.pathname.endsWith('index.html') || location.pathname === '/' ){
+    loadMd('#md-home', '/content/home.md');
+  }
+  // Chi siamo
+  if (location.pathname.endsWith('chi-siamo.html')){
+    loadMd('#md-chi', '/content/chi-siamo.md');
+  }
+  // Attività
+  if (location.pathname.endsWith('attivita.html')){
+    loadMd('#md-attivita', '/content/attivita.md');
+  }
+  // Galleria
+  if (location.pathname.endsWith('galleria.html')){
+    loadMd('#md-galleria', '/content/galleria.md');
+  }
+</script>

@@ -1,11 +1,12 @@
 backend:
-  name: github
-  repo: bruciato87/04hydra
+  name: git-gateway
   branch: main
-  base_url: https://effulgent-banoffee-eea359.netlify.app
-  auth_endpoint: /auth
+
 media_folder: "media"
 public_folder: "/media"
+
+publish_mode: editorial_workflow
+
 collections:
   - name: "pagine"
     label: "Pagine"
