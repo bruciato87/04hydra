@@ -1,12 +1,11 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: USERNAME/arcieri-sito
   branch: main
-
+  base_url: https://effulgent-banoffee-eea359.netlify.app
+  auth_endpoint: /auth
 media_folder: "media"
 public_folder: "/media"
-
-publish_mode: editorial_workflow
-
 collections:
   - name: "pagine"
     label: "Pagine"
