@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: USERNAME/arcieri-sito
+  repo: bruciato87/04hydra
   branch: main
   base_url: https://effulgent-banoffee-eea359.netlify.app
   auth_endpoint: /auth
